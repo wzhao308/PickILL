@@ -6,9 +6,15 @@ export const metadata: Metadata = {
   title: "PickILL",
   description:
     "A live queue board for UIUC's 8 pickleball courts — join a court's line and choose singles or doubles when you're up.",
-  icons: {
-    icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%93%3C/text%3E%3C/svg%3E",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+    title: "PickILL",
   },
+};
+
+export const viewport = {
+  themeColor: "#13294B",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
