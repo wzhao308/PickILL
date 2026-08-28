@@ -215,7 +215,7 @@ export default function Board() {
         </div>
 
         <p className="footer-note">
-          Tap a court to see its line, then queue up — first in line picks singles or doubles when they&rsquo;re up.
+          Pick a court to see its line, then queue up — first in line picks singles or doubles when they&rsquo;re up.
         </p>
         <p className="footer-tagline">It&rsquo;s Time to Pickle🥒</p>
       </main>
