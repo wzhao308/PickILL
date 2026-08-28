@@ -139,8 +139,14 @@ export default function Board() {
       )}
       <header className="header">
         <div className="brand">
-          <span className="brand-mark" aria-hidden="true">🏓</span>
-          <span className="brand-name">PickILL</span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="brand-mark" src="/pickill-logo.png" alt="" />
+          <span className="brand-name">
+            Pick
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="block-i" src="/block-i.png" alt="I" />
+            LL
+          </span>
           <span className="brand-sub">UIUC Pickleball Court Queue</span>
         </div>
         {player && (
@@ -161,13 +167,14 @@ export default function Board() {
           </div>
         )}
 
+        <div className="legend">
+          <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-open)" }} />Open</span>
+          <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-forming)" }} />Forming</span>
+          <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-busy)" }} />In play</span>
+        </div>
+
         <div className="board">
           <div>
-            <div className="legend">
-              <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-open)" }} />Open</span>
-              <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-forming)" }} />Forming</span>
-              <span className="legend-item"><span className="legend-dot" style={{ background: "var(--status-busy)" }} />In play</span>
-            </div>
             <div className="map">
               {state.courts.map((court) => {
                 const status = courtStatus(court);
@@ -208,9 +215,9 @@ export default function Board() {
         </div>
 
         <p className="footer-note">
-          8 courts, laid out 2 rows × 4 columns. Tap a court to see its line, then queue up — first in line picks
-          singles or doubles when they&rsquo;re up.
+          Tap a court to see its line, then queue up — first in line picks singles or doubles when they&rsquo;re up.
         </p>
+        <p className="footer-tagline">It&rsquo;s Time to Pickle🥒</p>
       </main>
 
       {nameGate !== "closed" && (
