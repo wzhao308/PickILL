@@ -199,15 +199,16 @@ body {
   font-family: 'Barlow Condensed', sans-serif; font-weight: 800;
   font-size: 1.4rem; line-height: 1; text-align: center; text-transform: uppercase; letter-spacing: .04em;
 }
-.court-meta { position: relative; z-index: 2; display: flex; align-items: center; justify-content: space-between; font-size: .74rem; gap: .35rem; }
+.court-meta {
+  position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;
+  justify-content: center; font-size: .74rem; gap: .3rem;
+}
 .status-pill {
   display: inline-flex; align-items: center; gap: .3rem; padding: .2rem .55rem; border-radius: 999px;
   font-weight: 700; font-size: .68rem; text-transform: uppercase; letter-spacing: .03em; white-space: nowrap;
-  flex-shrink: 0;
 }
 .queue-count {
-  font-family: 'JetBrains Mono', monospace; color: var(--text-muted); white-space: nowrap;
-  font-size: .6rem; min-width: 0; overflow: hidden; text-overflow: ellipsis;
+  font-family: 'JetBrains Mono', monospace; color: var(--text-muted); white-space: nowrap; font-size: .68rem;
 }
 
 .status--open .court-status-bar { background: var(--status-open); }
