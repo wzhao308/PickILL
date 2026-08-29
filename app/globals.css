@@ -169,7 +169,7 @@ body {
 @media (max-width: 880px) { .board { grid-template-columns: 1fr; } }
 
 .map { display: grid; grid-template-columns: repeat(4, 1fr); gap: .85rem; }
-@media (max-width: 560px) { .map { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 480px) { .map { gap: .5rem; } }
 
 .court-tile {
   position: relative; background: var(--surface); border: 1px solid var(--border);
@@ -209,6 +209,16 @@ body {
 }
 .queue-count {
   font-family: 'JetBrains Mono', monospace; color: var(--text-muted); white-space: nowrap; font-size: .68rem;
+}
+
+/* Courts always render 4-across (matching the real 2-row-by-4 facility layout),
+   so on phone-width screens the tiles get narrower rather than re-flowing —
+   scale everything down together so nothing overflows a narrower tile. */
+@media (max-width: 480px) {
+  .court-tile { padding: .6rem .35rem .5rem; }
+  .court-number { font-size: .92rem; letter-spacing: .01em; top: 6px; }
+  .status-pill { font-size: .56rem; padding: .15rem .4rem; }
+  .queue-count { font-size: .56rem; }
 }
 
 .status--open .court-status-bar { background: var(--status-open); }
